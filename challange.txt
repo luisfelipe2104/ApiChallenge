@@ -1,0 +1,24 @@
+Seu desafio é construir o backend API REST de uma aplicação de entregas, você poderá escolher detalhes da aplicação:  nome, tipo de item da entrega, e etc.
+
+Para esse projeto, é obrigatório o uso da stack: Typescript, NestJS, PrismaORM e MySQL. 
+
+Sua aplicação deverá ser capaz de:
+
+Obrigatório: 
+-> Criar a entrega de um item.
+-> Procurar pela entrega de um item específico.
+-> Procurar entregas por destinatário ou por remetente.
+-> Atualizar o estado como entregue.
+-> Cancelar uma entrega.
+-> Consumir uma outra API REST já existente para buscar dados. 
+## Sugestão exemplo: receber apenas o CEP e o número dos endereços e buscar os detalhes desse endereço em outra API, como bairro, rua, e geolocalização.
+
+Diferenciais (não obrigatórios): 
+-> Solução do problema.
+-> Fluxo de Autenticação
+-> Documentação (README ou Swagger)
+-> Boas práticas (clean code, clean architecture, design patterns e etc)
+-> POO
+Caso concorde com o teste, defina um prazo para entregá-lo e converse comigo sobre.
+
+Lembre-se que a vaga é imediata e urgente, então você definir o prazo é muito importante. Outras pessoas também estão fazendo o teste.
