@@ -12,6 +12,8 @@ export default async function updateItemDeliveryStatus(
     res: NextApiResponse<Data>
 ) {
     const { id } = req.body
+
+    if(!id) return res.status(400).json({ msg: "Data can't be empty!" }) 
     
     try{
         await prisma.item.update({
