@@ -7,10 +7,10 @@ Sua aplicação deverá ser capaz de:
 Obrigatório: 
 [NO]-> Criar a entrega de um item. --- CREATE
 [NO] -> Procurar pela entrega de um item específico. --- GET ONLY
-[NO] -> Procurar entregas por destinatário ou por remetente. --- GET ONLY
+[NO] -> Procurar entregas por destinatário ou por remetente. --- GET MANY
 [NO] -> Atualizar o estado como entregue.  --- UPDATE
 [NO]-> Cancelar uma entrega.  --- DELETE
-[NO] -> Consumir uma outra API REST já existente para buscar dados. --- GET EVENT MORE DATA
+[NO] -> Consumir uma outra API REST já existente para buscar dados. --- GET EVEN MORE DATA
 ## Sugestão exemplo: receber apenas o CEP e o número dos endereços e 
 buscar os detalhes desse endereço em outra API, 
 como bairro, rua, e geolocalização.  ---  https://viacep.com.br

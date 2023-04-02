@@ -11,4 +11,15 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Item {
+  id           Int     @id @default(autoincrement())
+  itemName     String  @db.VarChar(30)
+  receiverCEP  String  @db.VarChar(30)
+  receiverName String  @db.VarChar(50)
+  senderCEP    String  @db.VarChar(30)
+  senderName   String  @db.VarChar(50)
+  isDeliveried Boolean @db.TinyInt     @default(false) 
 }
