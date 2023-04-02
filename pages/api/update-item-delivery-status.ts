@@ -23,8 +23,8 @@ export default async function updateItemDeliveryStatus(
             }
         })
         return res.status(200).json({ msg: "Item successfully delivered!" })
-    } catch (err) {
-        return res.status(400).json({ msg: "An error occured!" })
+    } catch (err: any) {
+        return res.status(400).json({ msg: err.message })
     } finally {
         async () => {
             await prisma.$disconnect()
