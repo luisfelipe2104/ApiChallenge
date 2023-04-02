@@ -5,20 +5,22 @@ Para esse projeto, é obrigatório o uso da stack: Typescript, NestJS, PrismaORM
 Sua aplicação deverá ser capaz de:
 
 Obrigatório: 
--> Criar a entrega de um item.
--> Procurar pela entrega de um item específico.
--> Procurar entregas por destinatário ou por remetente.
--> Atualizar o estado como entregue.
--> Cancelar uma entrega.
--> Consumir uma outra API REST já existente para buscar dados. 
-## Sugestão exemplo: receber apenas o CEP e o número dos endereços e buscar os detalhes desse endereço em outra API, como bairro, rua, e geolocalização.
+[NO]-> Criar a entrega de um item. --- CREATE
+[NO] -> Procurar pela entrega de um item específico. --- GET ONLY
+[NO] -> Procurar entregas por destinatário ou por remetente. --- GET ONLY
+[NO] -> Atualizar o estado como entregue.  --- UPDATE
+[NO]-> Cancelar uma entrega.  --- DELETE
+[NO] -> Consumir uma outra API REST já existente para buscar dados. --- GET EVENT MORE DATA
+## Sugestão exemplo: receber apenas o CEP e o número dos endereços e 
+buscar os detalhes desse endereço em outra API, 
+como bairro, rua, e geolocalização.  ---  https://viacep.com.br
 
 Diferenciais (não obrigatórios): 
--> Solução do problema.
--> Fluxo de Autenticação
--> Documentação (README ou Swagger)
--> Boas práticas (clean code, clean architecture, design patterns e etc)
--> POO
+[NO] -> Solução do problema.
+[NO] -> Fluxo de Autenticação
+[NO] -> Documentação (README ou Swagger)
+[NO] -> Boas práticas (clean code, clean architecture, design patterns e etc)
+[NO] -> POO
 Caso concorde com o teste, defina um prazo para entregá-lo e converse comigo sobre.
 
 Lembre-se que a vaga é imediata e urgente, então você definir o prazo é muito importante. Outras pessoas também estão fazendo o teste.
