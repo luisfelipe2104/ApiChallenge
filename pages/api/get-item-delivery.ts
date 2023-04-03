@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
+import getFullItemData from "../../helpers/getFullItemData";
 
 const prisma = new PrismaClient()
 
@@ -12,12 +13,13 @@ export default async function getItemDelivery(
     if (!id) return res.status(400).json({ msg: "Data can't be empty" });
 
     try {
-        const item = await prisma.item.findFirst({
+        const item : any = await prisma.item.findFirst({
             where: {
                 id: id
             }
         })
-        return res.status(200).json(item);
+        const data = await getFullItemData(item)
+        return res.status(200).json(data);
     } catch (err: any) {
         return res.status(400).json({ msg: err.message });
     } finally {
