@@ -7,7 +7,7 @@ Sua aplicação deverá ser capaz de:
 Obrigatório: 
 [OK] -> Criar a entrega de um item. --- CREATE
 [OK] -> Procurar pela entrega de um item específico. --- GET ONLY
-[NO] -> Procurar entregas por destinatário ou por remetente. --- GET MANY
+[OK] -> Procurar entregas por destinatário ou por remetente. --- GET MANY
 [OK] -> Atualizar o estado como entregue.  --- UPDATE
 [OK] -> Cancelar uma entrega.  --- DELETE
 [NO] -> Consumir uma outra API REST já existente para buscar dados. --- GET EVEN MORE DATA
