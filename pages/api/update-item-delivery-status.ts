@@ -29,7 +29,7 @@ export default async function updateItemDeliveryStatus(
         return res.status(400).json({ msg: err.message })
     } finally {
         async () => {
-            // await prisma.$disconnect()
+            await prisma.$disconnect()
         }
     }
 }
