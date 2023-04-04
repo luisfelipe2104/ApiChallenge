@@ -5,7 +5,7 @@ module.exports = {
     version: "1.0.0",
     description: "This is an example of setting up swagger",
   },
-  host: "localhost:3000",
+  host: "https://api-challenge-omega.vercel.app",
   basePath: "/api",
   // securityDefinitions: {
   //   apiKeyAuth: {
