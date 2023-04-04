@@ -59,7 +59,43 @@ import { NextApiRequest, NextApiResponse } from "next";
  *         description: Sample response
  *         schema:
  *           $ref: '#/components/hello/HelloResponse'
-
+ * /create-item-delivery:
+ *   post:
+ *     description: create the delivery of an item
+ *     tags: [Hello]
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - itemName: itemName
+ *         in: body
+ *         required: true
+ *         type: string
+ *         description: Echo this name
+ *       - receiverCEP: receiverCEP
+ *         in: body
+ *         required: true
+ *         type: string
+ *         description: Echo this name
+ *       - receiverName: receiverName
+ *         in: body
+ *         required: true
+ *         type: string
+ *         description: Echo this name
+ *       - senderCEP: senderCEP
+ *         in: body
+ *         required: true
+ *         type: string
+ *         description: Echo this name
+ *       - senderName: senderName
+ *         in: body
+ *         required: true
+ *         type: string
+ *         description: Echo this name
+ *     responses:
+ *       201:
+ *         description: Sample response
+ *         schema:
+ *           $ref: '#/components/hello/HelloResponse'
  *
  */
 

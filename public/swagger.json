@@ -1,48 +1,133 @@
 {
-  "components": {
-    "hello": {
-      "HelloResponse": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
-      }
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Yet Another Node.js Blogg Application API",
+    "description": "Yet Another Node.js Blogg Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "info": {
-    "title": "NextJs Swagger Setup Example",
-    "version": "1.0.0",
-    "description": "This is an example of setting up swagger"
-  },
-  "host": "localhost:3000",
-  "basePath": "/api",
-  "swagger": "2.0",
+  "host": "https://api-challenge-omega.vercel.app",
+  "basePath": "",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for users in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
-    "/hello": {
-      "get": {
-        "description": "A test API",
+    "/api/create-item-delivery": {
+      "post": {
         "tags": [
-          "Hello"
+          "Users"
+        ],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
         ],
         "produces": [
           "application/json"
         ],
+        "responses": {
+          "200": {
+            "description": "Item will be delivered soon!",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get all users in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Users"
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}": {
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "description": "ID of user that we want to find",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get user with given ID",
+        "responses": {
+          "200": {
+            "description": "User is found",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete user with given ID",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "User is deleted",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update user with give ID",
+        "tags": [
+          "Users"
+        ],
         "parameters": [
           {
-            "name": "name",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": "Echo this name"
+            "name": "user",
+            "in": "body",
+            "description": "User with new values of properties",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
           }
         ],
         "responses": {
-          "201": {
-            "description": "Sample response",
+          "200": {
+            "description": "User is updated",
             "schema": {
-              "$ref": "#/components/hello/HelloResponse"
+              "$ref": "#/definitions/User"
             }
           }
         }
@@ -51,48 +136,34 @@
   },
   "definitions": {
     "User": {
-      "type": "object",
+      "required": [
+        "itemName",
+        "receiverCEP",
+        "receiverName",
+        "senderCEP",
+        "senderName"
+      ],
       "properties": {
-        "username": {
+        "itemName": {
           "type": "string"
         },
-        "firstName": {
+        "receiverCEP": {
           "type": "string"
         },
-        "lastName": {
+        "receiverName": {
           "type": "string"
         },
-        "products": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Product"
-          }
+        "senderCEP": {
+          "type": "string"
+        },
+        "senderName": {
+          "type": "string"
         }
       }
     },
-    "Product": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "createdBy": {
-          "type": "object",
-          "$ref": "#/definitions/User"
-        },
-        "createdAt": {
-          "type": "Date"
-        }
-      }
+    "Users": {
+      "type": "array",
+      "$ref": "#/definitions/User"
     }
-  },
-  "responses": {},
-  "parameters": {},
-  "securityDefinitions": {},
-  "tags": [
-    {
-      "name": "Hello",
-      "description": "A sample of API Group"
-    }
-  ]
+  }
 }
