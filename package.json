@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "swagger": "swagger-jsdoc -d swaggerDef.js && mv swagger.json ./public/."
   },
   "dependencies": {
     "@next/font": "13.2.4",
@@ -21,6 +22,9 @@
     "prisma": "^4.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.3"
+    "typescript": "5.0.3",
+    "swagger-ui-react": "^3.35.1",
+    "@types/swagger-ui-react": "^3.23.3",
+    "swagger-jsdoc": "^4.2.3"
   }
 }
