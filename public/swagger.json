@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Yet Another Node.js Blogg Application API",
-    "description": "Yet Another Node.js Blogg Application API",
+    "title": "API Challenge",
+    "description": "Api to handle item delivery",
     "license": {
       "name": "MIT",
       "url": "https://opensource.org/licenses/MIT"
@@ -14,7 +14,7 @@
   "tags": [
     {
       "name": "Item-Delivery",
-      "description": "API for users in the system"
+      "description": "Api to handle item delivery"
     }
   ],
   "schemes": [
