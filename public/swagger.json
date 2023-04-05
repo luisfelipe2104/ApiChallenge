@@ -70,24 +70,29 @@
         }
       }
     },
-    "/users/{userId}": {
-      "parameters": [
-        {
-          "name": "userId",
-          "in": "path",
-          "required": true,
-          "description": "ID of user that we want to find",
-          "type": "string"
-        }
-      ],
-      "get": {
+    "/api/get-item-delivery": {
+      "post": {
         "tags": [
           "Users"
         ],
-        "summary": "Get user with given ID",
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/getOneItem"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "Get an especific item delivery",
         "responses": {
           "200": {
-            "description": "User is found",
+            "description": "Item will be delivered soon!",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -161,9 +166,23 @@
         }
       }
     },
+    "getOneItemModel": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      }
+    },
     "Users": {
       "type": "array",
       "$ref": "#/definitions/User"
+    },
+    "getOneItem": {
+      "type": "array",
+      "$ref": "#/definitions/getOneItemModel"
     }
   }
 }
