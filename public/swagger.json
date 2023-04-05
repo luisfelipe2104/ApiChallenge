@@ -32,12 +32,12 @@
         "tags": [
           "Item-Delivery"
         ],
-        "description": "Create new user in system",
+        "description": "Item we want to deliver",
         "parameters": [
           {
             "name": "user",
             "in": "body",
-            "description": "User that we want to create",
+            "description": "Item we want to deliver",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -49,96 +49,6 @@
         "responses": {
           "200": {
             "description": "Item will be delivered soon!",
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
-          }
-        }
-      }
-    },
-    "/api/get-item-delivery": {
-      "get": {
-        "tags": [
-          "Item-Delivery"
-        ],
-        "description": "Create new user in system",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "description": "Get the item delivery with an especific id",
-            "schema": {
-              "$ref": "#/definitions/getOneItem"
-            }
-          }
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "summary": "Get an especific item delivery",
-        "responses": {
-          "200": {
-            "description": "Item will be delivered soon!",
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
-          }
-        }
-      }
-    },
-    "/api/delete-item-delivery": {
-      "delete": {
-        "tags": [
-          "Item-Delivery"
-        ],
-        "description": "Cancel the item delivery",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "description": "Cancel the item delivery",
-            "schema": {
-              "$ref": "#/definitions/getOneItem"
-            }
-          }
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "summary": "Cancel the item delivery",
-        "responses": {
-          "200": {
-            "description": "Cancel the item delivery",
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
-          }
-        }
-      }
-    },
-    "/api/update-item-delivery-status": {
-      "put": {
-        "tags": [
-          "Item-Delivery"
-        ],
-        "description": "Create new user in system",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "description": "Change the status of an item delivery",
-            "schema": {
-              "$ref": "#/definitions/getOneItem"
-            }
-          }
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "summary": "Change the status of an item delivery",
-        "responses": {
-          "200": {
-            "description": "Change the status of an item delivery",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -164,16 +74,70 @@
         ],
         "produces": [
           "application/json"
+        ]
+      }
+    },
+    "/api/get-item-delivery": {
+      "get": {
+        "tags": [
+          "Item-Delivery"
         ],
-        "summary": "Get many itens delivery",
-        "responses": {
-          "200": {
-            "description": "Item will be delivered soon!",
+        "description": "Get the item delivery with an especific id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Get the item delivery with an especific id",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/getOneItem"
             }
           }
-        }
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/delete-item-delivery": {
+      "delete": {
+        "tags": [
+          "Item-Delivery"
+        ],
+        "description": "Cancel the item delivery",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Cancel the item delivery",
+            "schema": {
+              "$ref": "#/definitions/getOneItem"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/update-item-delivery-status": {
+      "put": {
+        "tags": [
+          "Item-Delivery"
+        ],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Change the status of an item delivery",
+            "schema": {
+              "$ref": "#/definitions/getOneItem"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     }
   },
