@@ -15,7 +15,7 @@ export default async function getManyItemDelivery(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const { name } = req.body;
+    const { name } : any = req.query;
 
     if (!name) return res.status(400).json({ msg: "Data can't be empty" })
 
