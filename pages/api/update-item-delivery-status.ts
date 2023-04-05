@@ -18,7 +18,7 @@ export default async function updateItemDeliveryStatus(
     try{
         await prisma.item.update({
             where: {
-                id: id
+                id: parseInt(id),
             },
             data: {
                 isDeliveried: true

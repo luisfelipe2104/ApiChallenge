@@ -15,7 +15,7 @@ export default async function getItemDelivery(
     try {
         const item : any = await prisma.item.findFirst({
             where: {
-                id: id
+                id: parseInt(id),
             }
         })
         const data = await getFullItemData(item)

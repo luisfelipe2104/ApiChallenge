@@ -151,12 +151,12 @@
         "tags": [
           "Item-Delivery"
         ],
-        "description": "Get an especific item delivery",
+        "description": "Get many itens delivery",
         "parameters": [
           {
             "name": "name",
             "in": "query",
-            "description": "Get an especific item delivery",
+            "description": "Get many itens delivery",
             "schema": {
               "$ref": "#/definitions/getItemByName"
             }
@@ -165,7 +165,7 @@
         "produces": [
           "application/json"
         ],
-        "summary": "Get an especific item delivery",
+        "summary": "Get many itens delivery",
         "responses": {
           "200": {
             "description": "Item will be delivered soon!",

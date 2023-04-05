@@ -14,7 +14,7 @@ export default async function deleteItemDelivery(
   try {
     await prisma.item.delete({
       where: {
-        id: id,
+        id: parseInt(id),
       },
     });
     return res.status(200).json({ msg: "Delivery cancelled!" });
