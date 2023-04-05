@@ -11,7 +11,7 @@ export default async function updateItemDeliveryStatus(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const { id } = req.body
+    const { id } : any = req.query
 
     if(!id) return res.status(400).json({ msg: "Data can't be empty!" }) 
     

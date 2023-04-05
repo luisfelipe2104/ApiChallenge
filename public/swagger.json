@@ -30,7 +30,7 @@
     "/api/create-item-delivery": {
       "post": {
         "tags": [
-          "Users"
+          "Item-Delivery"
         ],
         "description": "Create new user in system",
         "parameters": [
@@ -57,16 +57,16 @@
       }
     },
     "/api/get-item-delivery": {
-      "post": {
+      "get": {
         "tags": [
-          "Users"
+          "Item-Delivery"
         ],
         "description": "Create new user in system",
         "parameters": [
           {
-            "name": "user",
-            "in": "body",
-            "description": "User that we want to create",
+            "name": "id",
+            "in": "query",
+            "description": "Get the item delivery with an especific id",
             "schema": {
               "$ref": "#/definitions/getOneItem"
             }
@@ -87,16 +87,16 @@
       }
     },
     "/api/delete-item-delivery": {
-      "post": {
+      "delete": {
         "tags": [
-          "Users"
+          "Item-Delivery"
         ],
-        "description": "Create new user in system",
+        "description": "Cancel the item delivery",
         "parameters": [
           {
-            "name": "user",
-            "in": "body",
-            "description": "User that we want to create",
+            "name": "id",
+            "in": "query",
+            "description": "Cancel the item delivery",
             "schema": {
               "$ref": "#/definitions/getOneItem"
             }
@@ -105,10 +105,10 @@
         "produces": [
           "application/json"
         ],
-        "summary": "Get an especific item delivery",
+        "summary": "Cancel the item delivery",
         "responses": {
           "200": {
-            "description": "Item will be delivered soon!",
+            "description": "Cancel the item delivery",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -117,16 +117,16 @@
       }
     },
     "/api/update-item-delivery-status": {
-      "post": {
+      "put": {
         "tags": [
-          "Users"
+          "Item-Delivery"
         ],
         "description": "Create new user in system",
         "parameters": [
           {
-            "name": "user",
-            "in": "body",
-            "description": "User that we want to create",
+            "name": "id",
+            "in": "query",
+            "description": "Change the status of an item delivery",
             "schema": {
               "$ref": "#/definitions/getOneItem"
             }
@@ -135,10 +135,10 @@
         "produces": [
           "application/json"
         ],
-        "summary": "Get an especific item delivery",
+        "summary": "Change the status of an item delivery",
         "responses": {
           "200": {
-            "description": "Item will be delivered soon!",
+            "description": "Change the status of an item delivery",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -147,16 +147,16 @@
       }
     },
     "/api/get-many-item-delivery": {
-      "post": {
+      "get": {
         "tags": [
-          "Users"
+          "Item-Delivery"
         ],
-        "description": "Create new user in system",
+        "description": "Get an especific item delivery",
         "parameters": [
           {
             "name": "name",
             "in": "query",
-            "description": "User that we want to create",
+            "description": "Get an especific item delivery",
             "schema": {
               "$ref": "#/definitions/getItemByName"
             }

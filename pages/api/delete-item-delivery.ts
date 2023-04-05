@@ -7,7 +7,7 @@ export default async function deleteItemDelivery(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { id } = req.body;
+  const { id } : any = req.query;
 
   if (!id) return res.status(400).json({ msg: "Data can't be empty!" });
 
