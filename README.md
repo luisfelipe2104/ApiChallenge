@@ -1,6 +1,8 @@
 <main>
   <h1 align="center">CHALLANGE-API 💻👨‍💻</h1>
   <p align="center">Trata-se de uma API REST para uma aplicação de entregas, onde podemos criar uma entrega, mudar o status de entrega, cancelar a entrega e acessar os dados da entrega</p>
+  <br />
+  <p align='center'>Para acessar a documentação em swagger da api e poder testa-la acesse: <a href='https://api-challenge-omega.vercel.app/docs'>https://api-challenge-omega.vercel.app/docs</a></p>
 </main>
 
 <section>
@@ -52,7 +54,25 @@
     "senderName": "nomeDoRemetente",
   }
   ```
+  <br />
+  <h3>GET: /api/get-many-item-delivery</h3>
+  <p>
+    para acessar os dados dessa rota, deve-se dar um GET enviando o nome do remetente ou do destinatario pela url:
+  </p>
   
+  ```json
+    /api/delete-item-delivery?name=name
+  ```
+  <br />
+  <h3>GET: /api/get-item-delivery</h3>
+  <p>
+    para acessar os dados dessa rota, deve-se dar um GET enviando o id do item pela url:
+  </p>
+  
+  ```json
+    /api/get-item-delivery?id=itemId
+  ```
+  <br />
   <h3>DELETE: /api/delete-item-delivery</h3>
   <p>
     para acessar os dados dessa rota, deve-se dar um DELETE enviando o id do item pela url:
@@ -60,5 +80,14 @@
   
   ```json
     /api/delete-item-delivery?id=itemId
+  ```
+<br />
+  <h3>PUT: /api/update-item-delivery-status</h3>
+  <p>
+    para acessar os dados dessa rota, deve-se dar um PUT enviando o id do item pela url:
+  </p>
+  
+  ```json
+    /api/update-item-delivery-status?id=itemId
   ```
 </section>
