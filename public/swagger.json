@@ -61,12 +61,12 @@
         "tags": [
           "Item-Delivery"
         ],
-        "description": "Get many itens delivery",
+        "description": "Get many itens delivery by sender name or receiver name",
         "parameters": [
           {
             "name": "name",
             "in": "query",
-            "description": "Get many itens delivery",
+            "description": "Get many itens delivery by sender name or receiver name",
             "schema": {
               "$ref": "#/definitions/getItemByName"
             }
@@ -75,10 +75,9 @@
         "produces": [
           "application/json"
         ],
-        "summary": "Get many itens delivery",
+        "summary": "Get many itens delivery by sender name or receiver name",
         "responses": {
           "200": {
-            "description": "Item will be delivered soon!",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -108,7 +107,6 @@
         "summary": "Get an especific item delivery",
         "responses": {
           "200": {
-            "description": "Item will be delivered soon!",
             "schema": {
               "$ref": "#/definitions/User"
             }
