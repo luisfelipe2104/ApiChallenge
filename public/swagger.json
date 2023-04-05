@@ -74,7 +74,16 @@
         ],
         "produces": [
           "application/json"
-        ]
+        ],
+        "summary": "Get many itens delivery",
+        "responses": {
+          "200": {
+            "description": "Item will be delivered soon!",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
       }
     },
     "/api/get-item-delivery": {
@@ -82,7 +91,7 @@
         "tags": [
           "Item-Delivery"
         ],
-        "description": "Get the item delivery with an especific id",
+        "description": "Create new user in system",
         "parameters": [
           {
             "name": "id",
@@ -95,7 +104,16 @@
         ],
         "produces": [
           "application/json"
-        ]
+        ],
+        "summary": "Get an especific item delivery",
+        "responses": {
+          "200": {
+            "description": "Item will be delivered soon!",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
       }
     },
     "/api/delete-item-delivery": {
@@ -116,7 +134,16 @@
         ],
         "produces": [
           "application/json"
-        ]
+        ],
+        "summary": "Cancel the item delivery",
+        "responses": {
+          "200": {
+            "description": "Cancel the item delivery",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
       }
     },
     "/api/update-item-delivery-status": {
@@ -137,7 +164,16 @@
         ],
         "produces": [
           "application/json"
-        ]
+        ],
+        "summary": "Change the status of an item delivery",
+        "responses": {
+          "200": {
+            "description": "Change the status of an item delivery",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
       }
     }
   },
