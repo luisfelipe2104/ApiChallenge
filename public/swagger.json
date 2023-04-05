@@ -128,6 +128,36 @@
             }
           }
         }
+      }
+    },
+    "/api/update-item-delivery-status": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/getOneItem"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "Get an especific item delivery",
+        "responses": {
+          "200": {
+            "description": "Item will be delivered soon!",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
       },
       "put": {
         "summary": "Update user with give ID",
