@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<main>
+  <h1 align="center">CHALLANGE-API 💻👨‍💻</h1>
+  <p align="center">Trata-se de uma API REST para uma aplicação de entregas, onde podemos criar uma entrega, mudar o status de entrega, cancelar a entrega e acessar os dados da entrega</p>
+</main>
 
-## Getting Started
+<section>
+  <h2>O que é uma API? 🧐🤨</h2>
+  <p>
+    API é uma sigla para Application Programming Interface (Interface de programação de aplicação), 
+    pode-se fazer uma analogia à um garçom, que serve aos clientes o que foi pedido, no conceito de API
+    os clientes são os usuários da aplicação, que indiretamente se comunicam com a API, pedindo ou relatando
+    situações, e recebendo os dados que foram pedidos.
+  </p>
+  
+  
+  <h2>Rotas 🚗🚙✈</h2>
+  <p>
+    Essa aplicação possui rotas, que são os tópicos da comunicação, por exemplo, a rota /login, serve para tratar os dados
+    do login do usuário, a rota /cadastro serve para tratar sobre o cadastro.
+  </p>
+</section>
 
-First, run the development server:
+<br>
+<br>
+  
+<section>
+  <h2 align="center">Rotas programadas👩‍💻</h2>
+  
+  <h3>/api</h3>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  <p>Essa rota da acesso a outras rotas:</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  <ul>
+    <li>/create-item-delivery</li>
+    <li>/delete-item-delivery</li>
+    <li>/get-item-delivery</li>
+    <li>/get-many-item-delivery</li>
+    <li>/update-item-delivery-status</li>
+  </ul>  
+  
+  <h3>POST: /api/create-item-delivery</h3>
+  <p>
+    para acessar os dados dessa rota, deve-se dar um POST com o body possuindo o seguinte json:
+  </p>
+  
+  ```json
+  {
+    "itemName": "nomeDoItem",
+    "receiverCEP": "cepDoDestinatario",
+    "receiverName": "nomeDoDestinatario",
+    "senderCEP": "cepDoRemetente",
+    "senderName": "nomeDoRemetente",
+  }
+  ```
+  
+  <h3>DELETE: /api/delete-item-delivery</h3>
+  <p>
+    para acessar os dados dessa rota, deve-se dar um DELETE enviando o id do item pela url:
+  </p>
+  
+  ```json
+    /api/delete-item-delivery?id=itemId
+  ```
+</section>
