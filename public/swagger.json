@@ -13,7 +13,7 @@
   "basePath": "",
   "tags": [
     {
-      "name": "Users",
+      "name": "Item-Delivery",
       "description": "API for users in the system"
     }
   ],
@@ -51,20 +51,6 @@
             "description": "Item will be delivered soon!",
             "schema": {
               "$ref": "#/definitions/User"
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Get all users in system",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/Users"
             }
           }
         }
@@ -158,25 +144,31 @@
             }
           }
         }
-      },
-      "put": {
-        "summary": "Update user with give ID",
+      }
+    },
+    "/api/get-many-item-delivery": {
+      "post": {
         "tags": [
           "Users"
         ],
+        "description": "Create new user in system",
         "parameters": [
           {
             "name": "user",
             "in": "body",
-            "description": "User with new values of properties",
+            "description": "User that we want to create",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/getItemByName"
             }
           }
         ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "Get an especific item delivery",
         "responses": {
           "200": {
-            "description": "User is updated",
+            "description": "Item will be delivered soon!",
             "schema": {
               "$ref": "#/definitions/User"
             }
@@ -222,6 +214,16 @@
         }
       }
     },
+    "getItemByNameModel": {
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "Users": {
       "type": "array",
       "$ref": "#/definitions/User"
@@ -229,6 +231,10 @@
     "getOneItem": {
       "type": "array",
       "$ref": "#/definitions/getOneItemModel"
+    },
+    "getItemByName": {
+      "type": "array",
+      "$ref": "#/definitions/getItemByNameModel"
     }
   }
 }
